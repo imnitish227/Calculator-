@@ -1,0 +1,40 @@
+.BtnStl {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 550;
+  color: white;
+  background-color: #262626;
+  cursor: pointer;
+}
+
+.BtnStlClr {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: #262626;
+  color: rgb(254, 131, 7);
+  cursor: pointer;
+}
+.Submit {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background-color: rgb(237, 129, 20);
+  color: white;
+  font-weight: 5500;
+  cursor: pointer;
+}
