@@ -1,25 +1,25 @@
 import style from "../components/CalButton.module.css";
-function CalButton({ numberValue, onEqualHandle, allClear, backValue }) {
+function CalButton({ onClickHandle}) {
   const buttonList = [
-    { label: "AC", className: style.BtnStlClr, onclick: allClear },
-    { label: "←", className: style.BtnStlClr, onclick: backValue },
-    { label: "%", className: style.BtnStlClr, onclick: numberValue },
-    { label: "/", className: style.BtnStlClr, onclick: numberValue },
-    { label: "7", className: style.BtnStl, onclick: numberValue },
-    { label: "8", className: style.BtnStl, onclick: numberValue },
-    { label: "9", className: style.BtnStl, onclick: numberValue },
-    { label: "*", className: style.BtnStl, onclick: numberValue },
-    { label: "4", className: style.BtnStl, onclick: numberValue },
-    { label: "5", className: style.BtnStl, onclick: numberValue },
-    { label: "6", className: style.BtnStl, onclick: numberValue },
-    { label: "-", className: style.BtnStl, onclick: numberValue },
-    { label: "1", className: style.BtnStl, onclick: numberValue },
-    { label: "2", className: style.BtnStl, onclick: numberValue },
-    { label: "3", className: style.BtnStl, onclick: numberValue },
-    { label: "+", className: style.BtnStl, onclick: numberValue },
-    { label: "0", className: style.BtnStl, onclick: numberValue },
-    { label: ".", className: style.BtnStl, onclick: numberValue },
-    { label: "=", className: style.Submit, onclick: onEqualHandle },
+    { label: "AC", className: style.BtnStlClr },
+    { label: "←", className: style.BtnStlClr},
+    { label: "%", className: style.BtnStlClr },
+    { label: "/", className: style.BtnStlClr},
+    { label: "7", className: style.BtnStl },
+    { label: "8", className: style.BtnStl },
+    { label: "9", className: style.BtnStl },
+    { label: "*", className: style.BtnStl },
+    { label: "4", className: style.BtnStl },
+    { label: "5", className: style.BtnStl },
+    { label: "6", className: style.BtnStl },
+    { label: "-", className: style.BtnStl },
+    { label: "1", className: style.BtnStl },
+    { label: "2", className: style.BtnStl },
+    { label: "3", className: style.BtnStl },
+    { label: "+", className: style.BtnStl },
+    { label: "0", className: style.BtnStl },
+    { label: ".", className: style.BtnStl },
+    { label: "=", className: style.Submit },
   ];
 
   return (
@@ -29,7 +29,7 @@ function CalButton({ numberValue, onEqualHandle, allClear, backValue }) {
           value={btns.label}
           key={index}
           className={btns.className}
-          onClick={btns.onclick}
+          onClick={onClickHandle}
         >
           {btns.label}
         </button>

@@ -5,22 +5,20 @@ import CalButton from "./CalButton";
 import { useState } from "react";
 function App() {
   const [inputValue, setInputValue] = useState("");
-  function numberValue(event) {
-    setInputValue((prevValue) => prevValue + event.target.value);
-  }
-  function onEqualHandle() {
-    if (inputValue === "") {
+  function onClickHandle(event) {
+    const btnsValue = event.target.value;
+    if (btnsValue === "←") {
+      setInputValue((prevValue) => prevValue.slice(0, -1));
+    } else if (btnsValue === "AC") {
       setInputValue("");
-    } else {
+    } else if (btnsValue === "=") {
       setInputValue(eval(inputValue));
+    } else {
+      const totalValue = inputValue + btnsValue;
+      setInputValue(totalValue);
     }
   }
-  function allClear() {
-    setInputValue("");
-  }
-  function backValue() {
-    setInputValue((prevValue) => prevValue.slice(0, -1));
-  }
+
   return (
     <>
       <center>
@@ -28,12 +26,7 @@ function App() {
           <CalBody />
           <Display inputValue={inputValue} />
           <br />
-          <CalButton
-            numberValue={numberValue}
-            onEqualHandle={onEqualHandle}
-            allClear={allClear}
-            backValue={backValue}
-          />
+          <CalButton onClickHandle={onClickHandle} />
         </div>
       </center>
     </>
