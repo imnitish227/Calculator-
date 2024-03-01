@@ -13,6 +13,8 @@ function App() {
       setInputValue("");
     } else if (btnsValue === "=") {
       setInputValue(eval(inputValue));
+    } else if (inputValue =="Infinity") {
+      setInputValue("");
     } else {
       const totalValue = inputValue + btnsValue;
       setInputValue(totalValue);
